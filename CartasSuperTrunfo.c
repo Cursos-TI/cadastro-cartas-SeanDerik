@@ -1,13 +1,6 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
-int main() {
-  // Área para definição das variáveis para armazenar as propriedades das cidades
-  #include <stdio.h>
-  
+int main(void) {
     /* Carta 1 */
     char estado1;
     char codigo1[20];
@@ -58,17 +51,38 @@ int main() {
     printf("Carta 2 - Pontos turisticos: ");
     scanf("%d", &pontos2);
 
+    /* Cálculos solicitados (armazenados em float) */
+    float densidade1 = 0.0f, pibPerCapita1 = 0.0f;
+    float densidade2 = 0.0f, pibPerCapita2 = 0.0f;
+
+    if (area1 > 0.0f) {
+        densidade1 = (float)populacao1 / area1;              /* hab/km² */
+    }
+    if (populacao1 > 0) {
+        pibPerCapita1 = pib1 / (float)populacao1;            /* moeda por pessoa */
+    }
+
+    if (area2 > 0.0f) {
+        densidade2 = (float)populacao2 / area2;
+    }
+    if (populacao2 > 0) {
+        pibPerCapita2 = pib2 / (float)populacao2;
+    }
+
     /* Saida simples e organizada */
     printf("\n\n--- Carta 1 ---\n");
-    printf("Estado: %c\nCodigo: %s\nCidade: %s\nPopulacao: %d\nArea: %.2f km2\nPIB: %.2f\nPontos turisticos: %d\n",
-           estado1, codigo1, nome1, populacao1, area1, pib1, pontos1);
+    printf("Estado: %c\nCodigo: %s\nCidade: %s\nPopulacao: %d\nArea: %.2f km2\nPIB: %.2f\n",
+           estado1, codigo1, nome1, populacao1, area1, pib1);
+    printf("Densidade populacional: %.2f hab/km2\n", densidade1);
+    printf("PIB per capita: %.2f\n", pibPerCapita1);
+    printf("Pontos turisticos: %d\n", pontos1);
 
     printf("\n--- Carta 2 ---\n");
-    printf("Estado: %c\nCodigo: %s\nCidade: %s\nPopulacao: %d\nArea: %.2f km2\nPIB: %.2f\nPontos turisticos: %d\n",
-           estado2, codigo2, nome2, populacao2, area2, pib2, pontos2);
+    printf("Estado: %c\nCodigo: %s\nCidade: %s\nPopulacao: %d\nArea: %.2f km2\nPIB: %.2f\n",
+           estado2, codigo2, nome2, populacao2, area2, pib2);
+    printf("Densidade populacional: %.2f hab/km2\n", densidade2);
+    printf("PIB per capita: %.2f\n", pibPerCapita2);
+    printf("Pontos turisticos: %d\n", pontos2);
 
-  // Área para exibição dos dados da cidade
-  
-  
-return 0;
-} 
+    return 0;
+}
