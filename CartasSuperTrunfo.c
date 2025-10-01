@@ -15,6 +15,8 @@ int main() {
   int pontosTuristicos;
   
   // Área para entrada de dados
+
+  // Carta 1
     printf("carta 1 - insira a letra do estado: ");
   scanf("%c",&estado);
 
@@ -36,8 +38,7 @@ int main() {
     printf("insira a letra do estado: ");
   scanf("%d",&pontosTuristicos);
 
-//separador
-
+// Carta B
       printf("carta 2 - insira a letra do estado: ");
   scanf("%c",&estado);
 
