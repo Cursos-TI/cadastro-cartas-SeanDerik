@@ -51,7 +51,6 @@ int main(void) {
     printf("Carta 2 - Pontos turisticos: ");
     scanf("%d", &pontos2);
 
-    /* Cálculos solicitados (armazenados em float) */
     float densidade1 = 0.0f, pibPerCapita1 = 0.0f;
     float densidade2 = 0.0f, pibPerCapita2 = 0.0f;
 
@@ -69,7 +68,6 @@ int main(void) {
         pibPerCapita2 = pib2 / (float)populacao2;
     }
 
-    /* Saida simples e organizada */
     printf("\n\n--- Carta 1 ---\n");
     printf("Estado: %c\nCodigo: %s\nCidade: %s\nPopulacao: %d\nArea: %.2f km2\nPIB: %.2f\n",
            estado1, codigo1, nome1, populacao1, area1, pib1);
