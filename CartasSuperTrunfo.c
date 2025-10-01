@@ -5,7 +5,7 @@ int main(void) {
     char estado1;
     char codigo1[20];
     char nome1[50];
-    int populacao1;
+    unsigned long int populacao1;
     float area1;
     float pib1;
     int pontos1;
@@ -14,7 +14,7 @@ int main(void) {
     char estado2;
     char codigo2[20];
     char nome2[50];
-    int populacao2;
+    unsigned long int populacao2;
     float area2;
     float pib2;
     int pontos2;
